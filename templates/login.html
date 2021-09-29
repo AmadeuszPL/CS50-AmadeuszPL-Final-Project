@@ -1,0 +1,26 @@
+{% extends "layout2.html" %}
+
+{% block title %}
+    Log in
+{% endblock %}
+
+{% block body %}
+<main class="form-login">
+    <form action="/login" method="post">
+        <img class="mb-2" src="http://iwilad.pl/wp-content/uploads/2020/05/cropped-logo-iwilad-odst%C4%99py.png" alt="logo" py-3 width="150px">
+        <h1 class="h3 mb-3 fw-normal">Please log in</h1>
+    
+        <div class="form-floating">
+            <input type="email" autocomplete="off" autofocus class="form-control" name="email" placeholder="E-mail adress">
+        </div>
+        <div class="form-floating">
+            <input type="password" autocomplete="off" class="form-control" name="password" placeholder="Password">
+        </div>
+        <button class="w-100 btn btn-lg btn-dark button-marigin" type="submit">Log in</button>
+    </form>
+    <form action="/register" method="get">
+        <button class="w-100 btn btn-lg btn-dark" type="submit">Register</button>
+    </form>
+    <p class="mt-5 mb-3 text-muted">&copy; AmadeuszPL 2021</p>
+</main> 
+{% endblock %}

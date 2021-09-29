@@ -1,0 +1,61 @@
+2021-09-28 11:11:59 [scrapy] DEBUG: Crawled (404) <GET http://example.com/robots.txt> (referer: None)
+2021-09-28 11:11:59 [scrapy] DEBUG: Crawled (404) <GET http://example.com/product/1> (referer: None)
+2021-09-28 11:11:59 [scrapy] ERROR: Spider error processing <GET http://example.com/product/1> (referer: None)
+Traceback (most recent call last):
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/utils/defer.py", line 120, in iter_errback
+    yield next(it)
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/utils/python.py", line 353, in __next__
+    return next(self.data)
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/utils/python.py", line 353, in __next__
+    return next(self.data)
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/spidermiddlewares/referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/spidermiddlewares/urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/Ania/Python_apps/helloflask/env/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/Ania/Python_apps/helloflask/fuelprices/fuelprices/spiders/fuelprices_autocentrum.py", line 10, in parse
+    print("procesing:"+response.url)
+AttributeError: 'Failure' object has no attribute 'url'
+2021-09-28 11:11:59 [scrapy] INFO: Closing spider (finished)
+2021-09-28 11:11:59 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 441,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 2004,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/404': 2,
+ 'elapsed_time_seconds': 0.700812,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 9, 28, 9, 11, 59, 556541),
+ 'httpcompression/response_bytes': 2512,
+ 'httpcompression/response_count': 2,
+ 'log_count/DEBUG': 16,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 52674560,
+ 'memusage/startup': 52674560,
+ 'response_received_count': 2,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/AttributeError': 1,
+ 'start_time': datetime.datetime(2021, 9, 28, 9, 11, 58, 855729)}
+2021-09-28 11:11:59 [scrapy] INFO: Spider closed (finished)

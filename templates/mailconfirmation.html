@@ -1,0 +1,21 @@
+{% extends "layout2.html" %}
+
+{% block title %}
+    Confirm mail
+{% endblock %}
+
+{% block body %}
+<main class="form-login">
+    <form action="/confirmmail" method="post">
+        <img class="mb-2" src="http://iwilad.pl/wp-content/uploads/2020/05/cropped-logo-iwilad-odst%C4%99py.png" alt="logo" py-3 width="150px">
+        <h1 class="h3 mb-3 fw-normal">Input received code</h1>
+        <p>You have only one chance, be careful!</p>
+    
+        <div class="form-floating">
+            <input type="text" autocomplete="off" autofocus class="form-control" name="code" placeholder="Input received number">
+        </div>
+        <button class="w-100 btn btn-lg btn-dark button-marigin" type="submit">Confirm</button>
+    </form>
+    <p class="mt-5 mb-3 text-muted">&copy; AmadeuszPL 2021</p>
+</main> 
+{% endblock %}

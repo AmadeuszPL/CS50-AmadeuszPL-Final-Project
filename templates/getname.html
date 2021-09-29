@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Input your name
+{% endblock %}
+
+{% block body %}
+<p>
+    <form action="/getname" method="post">
+        <input class="formfield" autocomplete="off"  autofocus name="name" placeholder="Input your name" type="text">
+        <button type="submit">Confirm</button>
+    </form>
+</p>
+
+{% for i in d %}
+    {{ i }} {{ d[i] }}<br>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Input your name
+{% endblock %}
+
+{% block body %}
+<h1>CS 50 Final Project</h1><br><br>
+<h2>Main idea</h2>
+<p>Main idea of this project was to implement website that to use you need to register, and confirm your e-mail</p>
+<p>After loging in on each tab you see current medium petrol prices in Poland (PLN currency) per 1 liter (0.264172052 US gallons)</p>
+<h2>Scrapy</h2>
+<p>Website use web crawler spider form Scrapy library that after loging in gets medium fuel prices in Poland from a  <a class="link" href="https://www.autocentrum.pl/paliwa/ceny-paliw/">website</a></p>
+<p>You can check historical fuel prices going into history tab that is from database on server</p>
+<p>Scrapy uses XPath to find wanted parts of website, than zips data and saves in CSV file<br>
+Both XPath <b>normalize-space()</b>b> and PYTHON string = <b>re.sub</b>("[^0-9,]", "", line[1]) <br>
+or PYTHON new = <b>string.replace</b>(",", ".") are used to save prices as floats in database</p>
+<h2>Bootsrap</h2>
+<p>Layout uses lot of bootstrap solutions, and some of my personal CSS edits.</p>
+<p>Website is fully responsive and looks good on all kinds of debices</p>
+<h2>Java script</h2>
+<p>I've only used one ready widget with New York wether in "say hello" section. <br>I want to focus on backend JAVA development, before I lurk into the world of frontend</p>
+<p>CS50 is great way to get knowledge how to learn new programming languages or technologies</p>
+<h2>CS50</h2>
+<p>I've used one library from CS50 - <b>from cs50 import SQL</b> - it's much more fun than using <b>Python sqlite3 library</b></p>
+<h2>Database</h2>
+<p>I've decided to use SQLITE3 database despite it's not most powerfull - I created only two easy tables so it's enough for this project</p>
+<h2>Forex</h2>
+<p>used from <b>forex_python</b>.converter import CurrencyRates to get current rate PLN to USD, very nice library</p>
+{% endblock %}

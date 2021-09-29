@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Input your name
+{% endblock %}
+
+{% block body %}
+<div class="row align-items-start">
+    <div class="col text-center">
+        PETROL 95
+    </div>
+    <div class="col text-center">
+        PETROL 98
+    </div>
+    <div class="col text-center">
+        DIESEL
+    </div>
+    <div class="col text-center">
+        DIESEL+
+    </div>
+    <div class="col text-center">
+        LPG
+    </div>
+    <div class="col text-center">
+        DATE
+    </div>                
+  </div>
+{% for i in range(len) %}
+    <div class="row align-items-start bg-primary">
+        <div class="col text-center">
+            {{ afd[i]['benzin_price'] }} PLN
+        </div>
+       <div class="col text-center">
+            {{ afd[i]['pbenzin_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ afd[i]['oil_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ afd[i]['poil_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ afd[i]['lpg_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ afd[i]['date'] }}
+        </div>      
+    </div>
+    <div class="row align-items-start">
+        <div class="col text-center">
+            {{ usd[i]['benzin_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ usd[i]['pbenzin_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ usd[i]['oil_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ usd[i]['poil_price'] }} PLN
+        </div>
+        <div class="col text-center">
+            {{ usd[i]['lpg_price'] }} PLN
+        </div>
+        <div class="col text-center">
+        </div>      
+    </div>
+{% endfor %}
+
+{% endblock %}
